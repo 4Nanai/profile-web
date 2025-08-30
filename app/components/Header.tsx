@@ -1,16 +1,72 @@
 'use client';
 
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
+import { usePathname } from 'next/navigation';
 
 export default function Header() {
     const [scrollY, setScrollY] = useState(0);
+    const pathname = usePathname();
+    const navRef = useRef<HTMLElement>(null);
+    const [indicatorStyle, setIndicatorStyle] = useState({
+        width: 0,
+        left: 0,
+        opacity: 0
+    });
+    const [isAnimating, setIsAnimating] = useState(false);
+
+    const navItems = ['Home', 'Research', 'Media', 'About'];
 
     useEffect(() => {
         const handleScroll = () => setScrollY(window.scrollY);
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
+
+    useEffect(() => {
+        const updateIndicator = () => {
+            if (!navRef.current) return;
+
+            const activeItem = navItems.find(item => {
+                if (item === 'Home') {
+                    return pathname === '/';
+                }
+                return pathname === `/${item.toLowerCase()}`;
+            });
+
+            if (!activeItem) {
+                setIndicatorStyle(prev => ({ ...prev, opacity: 0 }));
+                return;
+            }
+
+            const activeIndex = navItems.indexOf(activeItem);
+            const linkElements = navRef.current.querySelectorAll('a');
+            const activeElement = linkElements[activeIndex] as HTMLElement;
+
+            if (activeElement) {
+                setIsAnimating(true);
+                const navRect = navRef.current.getBoundingClientRect();
+                const activeRect = activeElement.getBoundingClientRect();
+
+                setIndicatorStyle({
+                    width: activeRect.width,
+                    left: activeRect.left - navRect.left,
+                    opacity: 1,
+                });
+
+                // 动画完成后重置状态
+                setTimeout(() => setIsAnimating(false), 300);
+            }
+        };
+
+        const timer = setTimeout(updateIndicator, 0);
+        window.addEventListener('resize', updateIndicator);
+
+        return () => {
+            clearTimeout(timer);
+            window.removeEventListener('resize', updateIndicator);
+        };
+    }, [pathname]);
 
     return (
         <header
@@ -22,22 +78,42 @@ export default function Header() {
                 {/* Logo */}
                 <Link
                     href="/"
-                    className={`text-xl font-bold transition-colors text-black`}
+                    className="text-xl font-bold transition-colors text-black"
                 >
                     JIAYI TANG
                 </Link>
 
                 {/* Navigation */}
-                <nav className="hidden md:flex space-x-8">
-                    {['Home', 'Research', 'Media', 'About'].map((item) => (
-                        <Link
-                            key={item}
-                            href={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
-                            className={`transition-colors hover:opacity-75 text-gray-600 hover:text-black`}
-                        >
-                            {item}
-                        </Link>
-                    ))}
+                <nav ref={navRef} className="hidden md:flex space-x-8 relative">
+                    {navItems.map((item) => {
+                        const isActive = item === 'Home'
+                            ? pathname === '/'
+                            : pathname === `/${item.toLowerCase()}`;
+
+                        return (
+                            <Link
+                                key={item}
+                                href={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
+                                className={`relative transition-all duration-200 hover:opacity-75 text-[18px] pb-1 ${
+                                    isActive ? 'text-blue-600' : 'text-gray-600 hover:text-black'
+                                }`}
+                            >
+                                {item}
+                            </Link>
+                        );
+                    })}
+
+                    {/* 滑动的蓝色指示条 */}
+                    <div
+                        className={`absolute bottom-0 h-0.5 bg-blue-600 rounded-full transition-all duration-300 ease-in-out ${
+                            isAnimating ? 'scale-y-125' : 'scale-y-100'
+                        }`}
+                        style={{
+                            width: `${indicatorStyle.width}px`,
+                            transform: `translateX(${indicatorStyle.left}px)`,
+                            opacity: indicatorStyle.opacity,
+                        }}
+                    />
                 </nav>
 
                 {/* Mobile menu button */}

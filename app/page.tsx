@@ -15,8 +15,6 @@ export default function HomePage() {
 
     return (
         <div className="min-h-screen">
-            <Header />
-
             {/* Hero Section with Background */}
             <section className="relative min-h-screen overflow-hidden">
                 {/* Background Image with Parallax */}
@@ -34,10 +32,10 @@ export default function HomePage() {
                 {/* Content Overlay */}
                 <div className="relative z-10 min-h-screen flex items-center">
                     <div className="max-w-7xl mx-auto px-6 py-12 w-full">
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div className="grid grid-cols-1 lg:grid-cols-2 items-center px-20">
                             {/* Left: Collage Image */}
                             <div className="flex justify-center">
-                                <div className="relative w-full max-w-md h-64">
+                                <div className="relative w-full max-w-md h-[50dvh]">
                                     <Image
                                         src="/images/collage.png"
                                         alt="Research and project collage"
@@ -49,12 +47,12 @@ export default function HomePage() {
                             </div>
 
                             {/* Right: Introduction Text */}
-                            <div className="space-y-6">
-                                <h1 className="text-5xl font-bold text-blue-600">Hello,</h1>
-                                <h2 className="text-xl font-semibold text-gray-800 leading-relaxed">
+                            <div>
+                                <h1 className="text-5xl pl-2 font-bold text-blue-600 leading-tight">Hello,</h1>
+                                <h2 className="text-3xl pl-2 text-black leading-11 max-w-lg">
                                     A student researcher at the intersection of mathematics, artificial intelligence, and public policy.
                                 </h2>
-                                <p className="text-gray-600 leading-relaxed">
+                                <p className="border-y-[1px] py-[18px] pl-2 border-black text-[18px] text-gray-700 leading-tight max-w-lg">
                                     dedicated to combating misinformation, advancing healthcare equity, and transforming inquiry into real-world impact.
                                 </p>
                             </div>
@@ -84,17 +82,17 @@ export default function HomePage() {
                         <div className="flex items-center">
                             <blockquote className="text-base leading-relaxed text-gray-700">
                                 &ldquo; I enjoy practicing{' '}
-                                <a href="#" className="text-blue-600 underline hover:text-blue-800">
+                                <span className="text-blue-600 hover:text-blue-800">
                                     calligraphy
-                                </a>
+                                </span>
                                 , finding tranquility in the flow of ink across paper. I also love{' '}
-                                <a href="#" className="text-blue-600 underline hover:text-blue-800">
+                                <span className="text-blue-600 hover:text-blue-800">
                                     street dance
-                                </a>
+                                </span>
                                 , which brings a kind of joy that comes from liberating myself to the rhythm of music. Additionally, I delight in{' '}
-                                <a href="#" className="text-blue-600 underline hover:text-blue-800">
+                                <span className="text-blue-600 hover:text-blue-800">
                                     painting
-                                </a>
+                                </span>
                                 , using colors to capture fleeting moments of life. These passions allow my world to hold both a serene stillness and a vibrant intensity. &rdquo;
                             </blockquote>
                         </div>
