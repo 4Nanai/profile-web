@@ -1,16 +1,27 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     content: [
-        "./app/**/*.{js,ts,jsx,tsx,mdx}",
-        "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-        "./components/**/*.{js,ts,jsx,tsx,mdx}",
+        './pages/**/*.{js,ts,jsx,tsx,mdx}',
+        './components/**/*.{js,ts,jsx,tsx,mdx}',
+        './app/**/*.{js,ts,jsx,tsx,mdx}',
     ],
     theme: {
         extend: {
             fontFamily: {
+                'source-han': ['Source Han Serif SC', 'serif'],
+                'istok-web': ['Istok Web', 'sans-serif'],
                 'sans': ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
-                'serif': ['Source Han Serif CN', 'serif'],
             },
+            fontWeight: {
+                'extralight': 200,
+                'light': 300,
+                'normal': 400,
+                'medium': 500,
+                'semibold': 600,
+                'bold': 700,
+                'extrabold': 800,
+                'black': 900,
+            }
         },
     },
     plugins: [],
