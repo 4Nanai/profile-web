@@ -48,8 +48,8 @@ export default function HomePage() {
 
                             {/* Right: Introduction Text */}
                             <div>
-                                <h1 className="text-5xl pl-2 font-bold text-blue-600 leading-tight">Hello,</h1>
-                                <h2 className="text-3xl pl-2 text-black leading-11 max-w-lg mb-[11px]">
+                                <h1 className="text-6xl pl-2 font-[900] text-blue-600 font-serif">Hello,</h1>
+                                <h2 className="text-3xl pl-2 text-black leading-11 max-w-lg mb-[11px] font-serif">
                                     A student researcher at the intersection of mathematics, artificial intelligence, and public policy.
                                 </h2>
                                 <p className="border-y-[1px] py-[18px] pl-2 border-black text-[18px] text-gray-700 leading-tight max-w-lg">

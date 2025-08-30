@@ -94,8 +94,8 @@ export default function Header() {
                             <Link
                                 key={item}
                                 href={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
-                                className={`relative transition-all duration-200 hover:opacity-75 text-[18px] pb-1 ${
-                                    isActive ? 'text-blue-600' : 'text-gray-600 hover:text-black'
+                                className={`relative transition-all duration-200 hover:opacity-75 text-[18px] pb-1 font-serif font-[600] ${
+                                    isActive ? 'text-blue-600' : 'text-gray-600/75 hover:text-black'
                                 }`}
                             >
                                 {item}
