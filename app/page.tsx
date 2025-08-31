@@ -15,21 +15,21 @@ export default function HomePage() {
     return (
         <div className="min-h-screen">
             {/* Hero Section with Background */}
-            <section className="relative lg:h-[calc(100vh-80px)] overflow-hidden">
+            <div className="relative lg:h-fit overflow-hidden">
                 {/* Background Image with Parallax */}
                 <div
                     className="absolute inset-0 w-full h-full"
                     style={{
-                        transform: `translateY(${scrollY * 0.5}px)`,
                         backgroundImage: 'url(/images/homepage_bg.png)',
                         backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                        backgroundRepeat: 'no-repeat'
+                        backgroundPosition: 'top',
+                        backgroundRepeat: 'no-repeat',
+                        backgroundAttachment: 'fixed',
                     }}
                 />
 
                 {/* Content Overlay */}
-                <div className="relative z-10 lg:min-h-[calc(100vh-80px)] flex items-center">
+                <div className="relative z-10 lg:min-h-dvh flex items-center">
                     <div className="max-w-7xl mx-auto px-6 py-12 w-full">
                         <div className="grid grid-cols-1 lg:grid-cols-[3fr_5fr] lg:gap-12 items-center">
                             {/* Left: Collage Image */}
@@ -63,80 +63,81 @@ export default function HomePage() {
                         </div>
                     </div>
                 </div>
-            </section>
-
-            {/* White Background Sections */}
-            <div className="relative z-20 bg-white">
-                <main className="max-w-7xl mx-auto px-6 py-12">
-                    {/* Personal Section */}
-                    <section className="grid grid-cols-1 lg:grid-cols-[2fr_5fr] gap-12 items-start mb-2 py-12 lg:px-12 px-6">
-                        {/* Left: Portrait */}
-                        <div className="flex justify-center">
-                            <div className="relative w-60 h-74 border-blue-600"
-                                 style={{boxShadow: '16px 16px 0px 0px #2563eb'}}>
-                                <Image
-                                    src="/images/profile.png"
-                                    alt="Jiayi Tang portrait"
-                                    fill
-                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                    className="object-fill"
-                                />
+                {/* White Background Sections */}
+                <div className="relative z-20 bg-white">
+                    <main className="max-w-7xl mx-auto px-6 py-12">
+                        {/* Personal Section */}
+                        <section className="grid grid-cols-1 lg:grid-cols-[2fr_5fr] gap-12 items-start mb-2 py-12 lg:px-12 px-6">
+                            {/* Left: Portrait */}
+                            <div className="flex justify-center">
+                                <div className="relative w-60 h-74 border-blue-600"
+                                     style={{boxShadow: '16px 16px 0px 0px #2563eb'}}>
+                                    <Image
+                                        src="/images/profile.png"
+                                        alt="Jiayi Tang portrait"
+                                        fill
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                        className="object-fill"
+                                    />
+                                </div>
                             </div>
-                        </div>
 
-                        {/* Right: Quote */}
-                        <div className="flex items-center my-auto" style={{transform: 'translateY(9px)'}}>
-                            <blockquote className="text-[18px] leading-relaxed text-gray-700 font-source-serif font-medium">
-                                &ldquo; I enjoy practicing{' '}
-                                <span className="text-blue-600 hover:text-blue-800">
+                            {/* Right: Quote */}
+                            <div className="flex items-center my-auto" style={{transform: 'translateY(9px)'}}>
+                                <blockquote className="text-[18px] leading-relaxed text-gray-700 font-source-serif font-medium">
+                                    &ldquo; I enjoy practicing{' '}
+                                    <span className="text-blue-600 hover:text-blue-800">
                                     calligraphy
                                 </span>
-                                , finding tranquility in the flow of ink across paper. I also love{' '}
-                                <span className="text-blue-600 hover:text-blue-800">
+                                    , finding tranquility in the flow of ink across paper. I also love{' '}
+                                    <span className="text-blue-600 hover:text-blue-800">
                                     street dance
                                 </span>
-                                , which brings a kind of joy that comes from liberating myself to the rhythm of music.
-                                Additionally, I delight in{' '}
-                                <span className="text-blue-600 hover:text-blue-800">
+                                    , which brings a kind of joy that comes from liberating myself to the rhythm of music.
+                                    Additionally, I delight in{' '}
+                                    <span className="text-blue-600 hover:text-blue-800">
                                     painting
                                 </span>
-                                , using colors to capture fleeting moments of life. These passions allow my world to
-                                hold both a serene stillness and a vibrant intensity. &rdquo;
-                            </blockquote>
-                        </div>
-                    </section>
+                                    , using colors to capture fleeting moments of life. These passions allow my world to
+                                    hold both a serene stillness and a vibrant intensity. &rdquo;
+                                </blockquote>
+                            </div>
+                        </section>
 
-                    {/* BreathWell Section */}
-                    <section className="max-w-4xl lg:mx-auto space-y-6 py-12 mx-6">
-                        <h3 className="text-blue-600 font-source-serif font-semibold text-3xl leading-relaxed">
-                            BreathWell:<br/>
-                            Youth for Occupational Lung Health
-                        </h3>
+                        {/* BreathWell Section */}
+                        <section className="max-w-4xl lg:mx-auto space-y-6 py-12 mx-6">
+                            <h3 className="text-blue-600 font-source-serif font-semibold text-3xl leading-relaxed">
+                                BreathWell:<br/>
+                                Youth for Occupational Lung Health
+                            </h3>
 
-                        <div className="space-y-4 text-gray-700 font-istok font-normal leading-relaxed">
-                            <p>
-                                BreathWell is a youth-led nonprofit organization dedicated to improving occupational
-                                lung health in China. Founded during my high school years, the initiative began with
-                                small patient visits in Nanjing and has since grown into a network of more than 200
-                                volunteers spanning students, doctors, community advocates, and media partners. Our
-                                mission is simple yet urgent: to turn public attention into sustainable safeguards for
-                                workers suffering from pneumoconiosis and other dust-related diseases.
-                            </p>
+                            <div className="space-y-4 text-gray-700 font-istok font-normal leading-relaxed">
+                                <p>
+                                    BreathWell is a youth-led nonprofit organization dedicated to improving occupational
+                                    lung health in China. Founded during my high school years, the initiative began with
+                                    small patient visits in Nanjing and has since grown into a network of more than 200
+                                    volunteers spanning students, doctors, community advocates, and media partners. Our
+                                    mission is simple yet urgent: to turn public attention into sustainable safeguards for
+                                    workers suffering from pneumoconiosis and other dust-related diseases.
+                                </p>
 
-                            <p>
-                                Over the past three years, we have organized dozens of home visits, coordinated medical
-                                equipment donations, and supported families with legal and financial guidance. We raised
-                                over ¥10,000 through community fundraisers and mobilized hundreds of people through a
-                                600km relay run for World Lung Health Day. Beyond direct aid, we have produced three
-                                short documentaries to amplify workers&apos; voices, bringing their struggles into
-                                public conversation. BreathWell exists to ensure that awareness does not vanish with a
-                                fading headline but is translated into resources, standards, and policy. For us,
-                                volunteers are the oxygen that keeps the movement alive.
-                            </p>
-                        </div>
-                    </section>
-                </main>
+                                <p>
+                                    Over the past three years, we have organized dozens of home visits, coordinated medical
+                                    equipment donations, and supported families with legal and financial guidance. We raised
+                                    over ¥10,000 through community fundraisers and mobilized hundreds of people through a
+                                    600km relay run for World Lung Health Day. Beyond direct aid, we have produced three
+                                    short documentaries to amplify workers&apos; voices, bringing their struggles into
+                                    public conversation. BreathWell exists to ensure that awareness does not vanish with a
+                                    fading headline but is translated into resources, standards, and policy. For us,
+                                    volunteers are the oxygen that keeps the movement alive.
+                                </p>
+                            </div>
+                        </section>
+                    </main>
+                </div>
             </div>
+
+
         </div>
     );
 }
