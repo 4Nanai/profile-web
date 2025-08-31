@@ -1,8 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import { useEffect, useState, useRef } from 'react';
-import { usePathname } from 'next/navigation';
+import {useEffect, useState, useRef} from 'react';
+import {usePathname} from 'next/navigation';
 
 export default function Header() {
     const [scrollY, setScrollY] = useState(0);
@@ -14,6 +14,7 @@ export default function Header() {
         opacity: 0
     });
     const [isAnimating, setIsAnimating] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(false);
 
     const navItems = ['Home', 'Research', 'Media', 'About'];
 
@@ -35,7 +36,7 @@ export default function Header() {
             });
 
             if (!activeItem) {
-                setIndicatorStyle(prev => ({ ...prev, opacity: 0 }));
+                setIndicatorStyle(prev => ({...prev, opacity: 0}));
                 return;
             }
 
@@ -54,7 +55,6 @@ export default function Header() {
                     opacity: 1,
                 });
 
-                // 动画完成后重置状态
                 setTimeout(() => setIsAnimating(false), 300);
             }
         };
@@ -68,63 +68,136 @@ export default function Header() {
         };
     }, [pathname]);
 
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+    };
+
+    const closeMenu = () => {
+        setMenuOpen(false);
+    };
+
     return (
-        <header
-            className={`fixed top-0 left-0 right-0 z-50 px-6 py-4 transition-all duration-300 ${
-                scrollY > 50 ? 'bg-white/90 backdrop-blur-sm' : 'bg-transparent'
-            }`}
-        >
-            <div className="max-w-7xl mx-auto flex justify-between items-center">
-                {/* Logo */}
-                <Link
-                    href="/"
-                    className="text-2xl font-istok font-bold transition-colors text-black"
-                >
-                    JIAYI TANG
-                </Link>
+        <>
+            <header
+                className={`fixed top-0 left-0 right-0 z-50 px-6 py-4 transition-all duration-300 ${
+                    scrollY > 50 || menuOpen ? 'bg-white/90 backdrop-blur-sm' : 'bg-transparent'
+                }`}
+            >
+                <div className="max-w-7xl mx-auto flex justify-between items-center">
+                    {/* Logo */}
+                    <Link
+                        href="/"
+                        className="text-2xl font-istok font-bold transition-colors text-black"
+                    >
+                        JIAYI TANG
+                    </Link>
 
-                {/* Navigation */}
-                <nav ref={navRef} className="hidden md:flex space-x-8 relative">
-                    {navItems.map((item) => {
-                        const isActive = item === 'Home'
-                            ? pathname === '/'
-                            : pathname === `/${item.toLowerCase()}`;
+                    {/* Desktop Navigation */}
+                    <nav ref={navRef} className="hidden md:flex space-x-8 relative">
+                        {navItems.map((item) => {
+                            const isActive = item === 'Home'
+                                ? pathname === '/'
+                                : pathname === `/${item.toLowerCase()}`;
 
-                        return (
-                            <Link
-                                key={item}
-                                href={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
-                                className={`relative transition-all duration-200 hover:opacity-75 text-[18px] font-source-serif font-semibold ${
-                                    isActive ? 'text-blue-600' : 'text-gray-600/75 hover:text-black'
-                                }`}
-                            >
-                                {item}
-                            </Link>
-                        );
-                    })}
+                            return (
+                                <Link
+                                    key={item}
+                                    href={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
+                                    className={`relative transition-all duration-200 hover:opacity-75 text-lg font-source-serif font-semibold ${
+                                        isActive ? 'text-blue-600' : 'text-gray-600/75 hover:text-black'
+                                    }`}
+                                >
+                                    {item}
+                                </Link>
+                            );
+                        })}
 
-                    {/* 滑动的蓝色指示条 */}
-                    <div
-                        className={`absolute bottom-0 h-0.5 bg-blue-600 rounded-full transition-all duration-300 ease-in-out ${
-                            isAnimating ? 'scale-y-125' : 'scale-y-100'
-                        }`}
-                        style={{
-                            width: `${indicatorStyle.width}px`,
-                            transform: `translateX(${indicatorStyle.left}px)`,
-                            opacity: indicatorStyle.opacity,
-                        }}
-                    />
-                </nav>
+                        {/* Sliding blue indicator bar */}
+                        <div
+                            className={`absolute bottom-0 h-0.5 bg-blue-600 rounded-full transition-all duration-300 ease-in-out ${
+                                isAnimating ? 'scale-y-125' : 'scale-y-100'
+                            }`}
+                            style={{
+                                width: `${indicatorStyle.width}px`,
+                                transform: `translateX(${indicatorStyle.left}px)`,
+                                opacity: indicatorStyle.opacity,
+                            }}
+                        />
+                    </nav>
 
-                {/* Mobile menu button */}
-                <button
-                    className="md:hidden p-2 transition-colors text-black"
-                >
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                </button>
+                    {/* Mobile menu button */}
+                    <button
+                        className="md:hidden p-2 transition-all duration-300 text-black hover:bg-black/5 rounded-lg"
+                        onClick={toggleMenu}
+                        aria-label="Toggle menu"
+                    >
+                        <svg
+                            className="w-6 h-6 transition-all duration-300"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d={menuOpen
+                                    ? "M6 18L18 6M6 6l12 12"
+                                    : "M4 6h16M4 12h16M4 18h16"
+                                }
+                            />
+                        </svg>
+                    </button>
+                </div>
+            </header>
+
+            {/* 背景遮罩层 - 独立透明度动画 */}
+            <div
+                className={`fixed top-0 left-0 right-0 bottom-0 z-30 md:hidden bg-gradient-to-b from-black/10 via-black/15 to-black/25 transition-opacity duration-300 ease-out backdrop-blur-sm ${
+                    menuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
+                }`}
+                onClick={closeMenu}
+            />
+
+            {/* Mobile menu drawer - 只有滑动动画 */}
+            <div
+                className={`fixed top-0 left-0 right-0 z-40 md:hidden transition-transform duration-300 ease-in-out ${
+                    menuOpen ? 'translate-y-0' : '-translate-y-full'
+                }`}
+            >
+                {/* Menu content */}
+                <div className="bg-white/90 backdrop-blur-sm pt-24 pb-6 px-6 shadow-lg">
+                    <nav className="flex flex-col space-y-1">
+                        {navItems.map((item, index) => {
+                            const isActive = item === 'Home'
+                                ? pathname === '/'
+                                : pathname === `/${item.toLowerCase()}`;
+
+                            return (
+                                <Link
+                                    key={item}
+                                    href={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
+                                    className={`py-3 px-4 rounded-lg text-lg font-source-serif font-semibold transition-all duration-200 transform ${
+                                        menuOpen
+                                            ? 'translate-x-0 opacity-100'
+                                            : 'translate-x-4 opacity-0'
+                                    } ${
+                                        isActive
+                                            ? 'text-blue-600 bg-blue-50'
+                                            : 'text-gray-700 hover:text-black hover:bg-blue-500/25'
+                                    }`}
+                                    style={{
+                                        transitionDelay: menuOpen ? `${index * 50}ms` : '0ms'
+                                    }}
+                                    onClick={closeMenu}
+                                >
+                                    {item}
+                                </Link>
+                            );
+                        })}
+                    </nav>
+                </div>
             </div>
-        </header>
+        </>
     );
 }
