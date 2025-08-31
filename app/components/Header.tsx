@@ -83,7 +83,7 @@ export default function Header() {
                     scrollY > 50 || menuOpen ? 'bg-white/90 backdrop-blur-sm' : 'bg-transparent'
                 }`}
             >
-                <div className="max-w-7xl mx-auto flex justify-between items-center">
+                <div className="max-w-full flex justify-between items-center">
                     {/* Logo */}
                     <Link
                         href="/"
@@ -93,7 +93,7 @@ export default function Header() {
                     </Link>
 
                     {/* Desktop Navigation */}
-                    <nav ref={navRef} className="hidden md:flex space-x-8 relative">
+                    <nav ref={navRef} className="hidden md:flex gap-8 relative">
                         {navItems.map((item) => {
                             const isActive = item === 'Home'
                                 ? pathname === '/'
