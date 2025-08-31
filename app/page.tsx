@@ -66,7 +66,7 @@ export default function HomePage() {
                 <div style={{ willChange: 'transform' }}>
                     <div className="relative z-10 lg:min-h-dvh flex items-center">
                         <div className="max-w-7xl mx-auto px-6 py-12 w-full">
-                            <div className="grid grid-cols-1 lg:grid-cols-[3fr_5fr] lg:gap-12 items-center">
+                            <div className="grid grid-cols-1 lg:grid-cols-[3fr_5fr] lg:gap-12 lg:px-0 items-center">
                                 {/* Left: Collage Image */}
                                 <div className="flex justify-center">
                                     <div className="relative w-full max-w-md h-[50dvh]">
@@ -85,12 +85,12 @@ export default function HomePage() {
                                 <div className="mx-5 lg:mx-0">
                                     <div className="font-source-serif">
                                         <h1 className="text-6xl pl-2 font-extrabold text-blue-600">Hello,</h1>
-                                        <h2 className="text-3xl pl-2 lg:pr-30 text-black leading-11 max-w-fit mb-[11px] font-semibold">
+                                        <h2 className="text-3xl pl-2 text-black leading-11 max-w-fit mb-[11px] font-semibold">
                                             A student researcher at the intersection of mathematics, artificial
                                             intelligence, and public policy.
                                         </h2>
                                     </div>
-                                    <p className="border-y-[1px] py-[18px] pl-2 font-istok font-normal border-black text-[18px] text-gray-700 leading-tight lg:max-w-[80%]">
+                                    <p className="border-y-[1px] py-[18px] pl-2 font-istok font-normal border-black text-[18px] text-gray-700 leading-tight">
                                         dedicated to combating misinformation, advancing healthcare equity, and
                                         transforming
                                         inquiry into real-world impact.
@@ -104,10 +104,10 @@ export default function HomePage() {
                     <div className="relative z-20 bg-white">
                         <main className="max-w-7xl mx-auto px-6 py-12">
                             {/* Personal Section */}
-                            <section className="grid grid-cols-1 lg:grid-cols-[2fr_5fr] gap-12 items-start mb-2 py-12 lg:px-12 px-6">
+                            <section className="grid grid-cols-1 lg:grid-cols-[2fr_5fr] gap-12 items-start mb-2 py-12 lg:px-0 px-6">
                                 {/* Left: Portrait */}
                                 <div className="flex justify-center">
-                                    <div className="relative w-60 h-74 border-blue-600"
+                                    <div className="relative w-70 h-86 border-blue-600"
                                          style={{boxShadow: '16px 16px 0px 0px #2563eb'}}>
                                         <Image
                                             src="/images/profile.png"
@@ -144,7 +144,7 @@ export default function HomePage() {
                             </section>
 
                             {/* BreathWell Section */}
-                            <section className="max-w-4xl lg:mx-auto space-y-6 py-12 mx-6">
+                            <section className="max-w-fit lg:mx-30 space-y-6 py-12 mx-6">
                                 <h3 className="text-blue-600 font-source-serif font-semibold text-3xl leading-relaxed">
                                     BreathWell:<br/>
                                     Youth for Occupational Lung Health
