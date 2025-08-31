@@ -54,7 +54,7 @@ export default function HomePage() {
                     ref={backgroundRef}
                     className="fixed inset-0 w-full h-[120vh] -z-10"
                     style={{
-                        backgroundImage: 'url(/images/homepage_bg.png)',
+                        backgroundImage: 'url(/images/homepage_bg_deeper.png)',
                         backgroundSize: 'cover',
                         backgroundPosition: 'top center',
                         backgroundRepeat: 'no-repeat',
