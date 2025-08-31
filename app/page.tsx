@@ -47,7 +47,7 @@ export default function HomePage() {
                             </div>
 
                             {/* Right: Introduction Text */}
-                            <div className="mx-6 lg:mx-0">
+                            <div className="mx-5 lg:mx-0">
                                 <div className="font-source-serif">
                                     <h1 className="text-6xl pl-2 font-extrabold text-blue-600">Hello,</h1>
                                     <h2 className="text-3xl pl-2 lg:pr-30 text-black leading-11 max-w-fit mb-[11px] font-semibold">
