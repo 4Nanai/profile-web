@@ -166,7 +166,7 @@ export default function Header() {
                 }`}
             >
                 {/* Menu content */}
-                <div className="bg-white/90 backdrop-blur-sm pt-24 pb-6 px-6 shadow-lg">
+                <div className={`bg-white/90 backdrop-blur-sm pt-24 pb-6 px-6 ${menuOpen ? 'shadow-lg' : ''}`}>
                     <nav className="flex flex-col space-y-1">
                         {navItems.map((item, index) => {
                             const isActive = item === 'Home'
