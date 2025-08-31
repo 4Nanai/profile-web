@@ -1,22 +1,11 @@
 'use client';
 
 import Image from 'next/image';
-import {useEffect, useState} from 'react';
 
 export default function HomePage() {
-    const [scrollY, setScrollY] = useState(0);
-
-    useEffect(() => {
-        const handleScroll = () => setScrollY(window.scrollY);
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
-
     return (
         <div className="min-h-screen">
-            {/* Hero Section with Background */}
             <div className="relative lg:h-fit overflow-hidden">
-                {/* Background Image with Parallax */}
                 <div
                     className="absolute inset-0 w-full h-full"
                     style={{
