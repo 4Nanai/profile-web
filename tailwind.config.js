@@ -8,8 +8,8 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                'source-han': ['Source Han Serif SC', 'serif'],
-                'istok-web': ['Istok Web', 'sans-serif'],
+                'source-serif': ['var(--font-source-serif)', 'serif'],
+                'istok': ['var(--font-istok)', 'sans-serif'],
                 'sans': ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
             },
             fontWeight: {
