@@ -1,9 +1,7 @@
 @import "tailwindcss";
-
 @theme {
   --font-source-serif: var(--font-source-serif), serif;
 }
-
 @theme {
   --font-istok: var(--font-istok), sans-serif;
 }
@@ -16,14 +14,62 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
-/* 确保滚动流畅 */
-* {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* 3D Parallax Container */
+.parallax-container {
+  perspective: 1000px;
+  perspective-origin: center top;
+  transform-style: preserve-3d;
+  overflow-x: hidden;
 }
 
-/* 优化视差滚动性能 */
-.parallax-bg {
+/* Parallax Section */
+.parallax-section {
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+/* Background Layer - Far from viewer */
+.parallax-background {
+  transform-style: preserve-3d;
+  will-change: transform;
+  transform: translateZ(-1000px);
+  /* 移除 transition 属性 */
+}
+
+/* Foreground Layers - Close to viewer */
+.parallax-foreground {
+  transform-style: preserve-3d;
   will-change: transform;
   transform: translateZ(0);
+  /* 移除 transition 属性 */
+}
+
+/* Floating elements for subtle animation - 只在悬停时有过渡 */
+.floating-element {
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.floating-element:hover {
+  transform: translateZ(10px);
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+  .parallax-container {
+    perspective: 500px;
+  }
+
+  .parallax-background {
+    transform: translateZ(-50px) scale(1.05);
+  }
+}
+
+/* Disable parallax on reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .parallax-background,
+  .parallax-foreground {
+    transform: none !important;
+  }
 }

@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import './globals.css';
 import Header from './components/Header';
 import localFont from "next/font/local";
-import Footer from "@/app/components/Footer";
 
 export const metadata: Metadata = {
     title: 'Jiayi Tang - Student Researcher',
@@ -59,7 +58,6 @@ export default function RootLayout({
         <body className={`antialiased ${sourceSerif.variable} ${istok.variable}`}>
         <Header />
         {children}
-        <Footer />
         </body>
         </html>
     );
