@@ -49,7 +49,7 @@ export default function HomePage() {
                             <div>
                                 <div className="font-source-serif">
                                     <h1 className="text-6xl pl-2 font-extrabold text-blue-600">Hello,</h1>
-                                    <h2 className="text-3xl pl-2 pr-6 text-black leading-11 max-w-fit mb-[11px] font-semibold">
+                                    <h2 className="text-3xl pl-2 pr-30 text-black leading-11 max-w-fit mb-[11px] font-semibold">
                                         A student researcher at the intersection of mathematics, artificial
                                         intelligence, and public policy.
                                     </h2>
