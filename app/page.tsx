@@ -68,22 +68,23 @@ export default function HomePage() {
             <div className="relative z-20 bg-white">
                 <main className="max-w-7xl mx-auto px-6 py-12">
                     {/* Personal Section */}
-                    <section className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-24 py-12">
+                    <section className="grid grid-cols-1 lg:grid-cols-[2fr_5fr] gap-12 items-start mb-24 py-12 px-12">
                         {/* Left: Portrait */}
-                        <div className="flex justify-center lg:justify-start">
-                            <div className="relative w-72 h-96 border-4 border-blue-600">
+                        <div className="flex justify-center">
+                            <div className="relative w-60 h-74 border-blue-600"
+                                 style={{boxShadow: '16px 16px 0px 0px #2563eb'}}>
                                 <Image
                                     src="/images/profile.png"
                                     alt="Jiayi Tang portrait"
                                     fill
-                                    className="object-cover"
+                                    className="object-fill"
                                 />
                             </div>
                         </div>
 
                         {/* Right: Quote */}
-                        <div className="flex items-center">
-                            <blockquote className="text-base leading-relaxed text-gray-700">
+                        <div className="flex items-center my-auto" style={{transform: 'translateY(9px)'}}>
+                            <blockquote className="text-[18px] leading-relaxed text-gray-700 font-source-serif font-medium">
                                 &ldquo; I enjoy practicing{' '}
                                 <span className="text-blue-600 hover:text-blue-800">
                                     calligraphy
