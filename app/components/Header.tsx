@@ -78,7 +78,7 @@ export default function Header() {
                 {/* Logo */}
                 <Link
                     href="/"
-                    className="text-xl font-bold transition-colors text-black"
+                    className="text-2xl font-istok font-bold transition-colors text-black"
                 >
                     JIAYI TANG
                 </Link>

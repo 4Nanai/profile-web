@@ -2,6 +2,8 @@
 
 import Image from 'next/image';
 import {useEffect, useState} from 'react';
+import InstagramIcon from "@/public/icons/Instagram";
+import Link from "next/link";
 
 export default function HomePage() {
     const [scrollY, setScrollY] = useState(0);
@@ -68,7 +70,7 @@ export default function HomePage() {
             <div className="relative z-20 bg-white">
                 <main className="max-w-7xl mx-auto px-6 py-12">
                     {/* Personal Section */}
-                    <section className="grid grid-cols-1 lg:grid-cols-[2fr_5fr] gap-12 items-start mb-24 py-12 px-12">
+                    <section className="grid grid-cols-1 lg:grid-cols-[2fr_5fr] gap-12 items-start mb-2 py-12 px-12">
                         {/* Left: Portrait */}
                         <div className="flex justify-center">
                             <div className="relative w-60 h-74 border-blue-600"
@@ -106,12 +108,12 @@ export default function HomePage() {
 
                     {/* BreathWell Section */}
                     <section className="max-w-4xl mx-auto space-y-6 py-12">
-                        <h3 className="text-blue-600 font-semibold text-2xl leading-relaxed">
+                        <h3 className="text-blue-600 font-source-serif font-semibold text-3xl leading-relaxed">
                             BreathWell:<br/>
                             Youth for Occupational Lung Health
                         </h3>
 
-                        <div className="space-y-4 text-gray-700 leading-relaxed">
+                        <div className="space-y-4 text-gray-700 font-istok font-normal leading-relaxed">
                             <p>
                                 BreathWell is a youth-led nonprofit organization dedicated to improving occupational
                                 lung health in China. Founded during my high school years, the initiative began with
@@ -138,10 +140,20 @@ export default function HomePage() {
                 {/* Footer */}
                 <footer className="bg-black text-white text-center py-8">
                     <div className="space-y-2">
-                        <p className="font-medium">JIAYI TANG ©</p>
+                        <div className="flex items-center justify-center">
+                            <span className="font-istok font-medium text-xl">
+                                JIAYI TANG
+                            </span>
+                            <Link href="/" className="ml-2">
+                                <InstagramIcon size={20} className="text-white"/>
+                            </Link>
+                        </div>
                         <p className="text-gray-300">xxxxxxxxxx@gmail.com</p>
                     </div>
                 </footer>
+
+
+
             </div>
         </div>
     );
