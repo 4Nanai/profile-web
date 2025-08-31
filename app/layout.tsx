@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import './globals.css';
 import Header from './components/Header';
 import localFont from "next/font/local";
-import { Source_Serif_4 } from 'next/font/google'
 
 export const metadata: Metadata = {
     title: 'Jiayi Tang - Student Researcher',

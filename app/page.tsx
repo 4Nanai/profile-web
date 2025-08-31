@@ -17,7 +17,7 @@ export default function HomePage() {
     return (
         <div className="min-h-screen">
             {/* Hero Section with Background */}
-            <section className="relative h-[calc(100vh-80px)] overflow-hidden">
+            <section className="relative lg:h-[calc(100vh-80px)] overflow-hidden">
                 {/* Background Image with Parallax */}
                 <div
                     className="absolute inset-0 w-full h-full"
@@ -31,9 +31,9 @@ export default function HomePage() {
                 />
 
                 {/* Content Overlay */}
-                <div className="relative z-10 min-h-[calc(100vh-80px)] flex items-center">
+                <div className="relative z-10 lg:min-h-[calc(100vh-80px)] flex items-center">
                     <div className="max-w-7xl mx-auto px-6 py-12 w-full">
-                        <div className="grid grid-cols-1 lg:grid-cols-[4fr_5fr] items-center">
+                        <div className="grid grid-cols-1 lg:grid-cols-[3fr_5fr] lg:gap-12 items-center">
                             {/* Left: Collage Image */}
                             <div className="flex justify-center">
                                 <div className="relative w-full max-w-md h-[50dvh]">
@@ -41,6 +41,7 @@ export default function HomePage() {
                                         src="/images/collage.png"
                                         alt="Research and project collage"
                                         fill
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                         className="object-contain"
                                         priority
                                     />
@@ -51,12 +52,12 @@ export default function HomePage() {
                             <div>
                                 <div className="font-source-serif">
                                     <h1 className="text-6xl pl-2 font-extrabold text-blue-600">Hello,</h1>
-                                    <h2 className="text-3xl pl-2 pr-30 text-black leading-11 max-w-fit mb-[11px] font-semibold">
+                                    <h2 className="text-3xl pl-2 lg:pr-30 text-black leading-11 max-w-fit mb-[11px] font-semibold">
                                         A student researcher at the intersection of mathematics, artificial
                                         intelligence, and public policy.
                                     </h2>
                                 </div>
-                                <p className="border-y-[1px] py-[18px] pl-2 font-istok font-normal border-black text-[18px] text-gray-700 leading-tight max-w-[calc(100%-50px)]">
+                                <p className="border-y-[1px] py-[18px] pl-2 font-istok font-normal border-black text-[18px] text-gray-700 leading-tight lg:max-w-[calc(100%-50px)]">
                                     dedicated to combating misinformation, advancing healthcare equity, and transforming
                                     inquiry into real-world impact.
                                 </p>
@@ -70,7 +71,7 @@ export default function HomePage() {
             <div className="relative z-20 bg-white">
                 <main className="max-w-7xl mx-auto px-6 py-12">
                     {/* Personal Section */}
-                    <section className="grid grid-cols-1 lg:grid-cols-[2fr_5fr] gap-12 items-start mb-2 py-12 px-12">
+                    <section className="grid grid-cols-1 lg:grid-cols-[2fr_5fr] gap-12 items-start mb-2 py-12 lg:px-12 px-6">
                         {/* Left: Portrait */}
                         <div className="flex justify-center">
                             <div className="relative w-60 h-74 border-blue-600"
@@ -79,6 +80,7 @@ export default function HomePage() {
                                     src="/images/profile.png"
                                     alt="Jiayi Tang portrait"
                                     fill
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                     className="object-fill"
                                 />
                             </div>
@@ -107,7 +109,7 @@ export default function HomePage() {
                     </section>
 
                     {/* BreathWell Section */}
-                    <section className="max-w-4xl mx-auto space-y-6 py-12">
+                    <section className="max-w-4xl lg:mx-auto space-y-6 py-12 mx-6">
                         <h3 className="text-blue-600 font-source-serif font-semibold text-3xl leading-relaxed">
                             BreathWell:<br/>
                             Youth for Occupational Lung Health
