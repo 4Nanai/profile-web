@@ -79,7 +79,7 @@ export default function Header() {
     return (
         <>
             <header
-                className={`fixed top-0 left-0 right-0 z-50 px-6 py-4 transition-all duration-300 ${
+                className={`fixed top-0 left-0 right-0 z-50 px-6 lg:py-4 py-10 transition-all duration-300 ${
                     scrollY > 50 || menuOpen ? 'bg-white/90 backdrop-blur-sm' : 'bg-transparent'
                 }`}
             >
@@ -87,13 +87,13 @@ export default function Header() {
                     {/* Logo */}
                     <Link
                         href="/"
-                        className="text-2xl font-istok font-bold transition-colors text-black"
+                        className="text-2xl font-istok font-bold transition-colors text-black lg:pt-0 pt-1"
                     >
                         JIAYI TANG
                     </Link>
 
                     {/* Desktop Navigation */}
-                    <nav ref={navRef} className="hidden md:flex gap-8 relative">
+                    <nav ref={navRef} className="hidden lg:flex gap-8 relative">
                         {navItems.map((item) => {
                             const isActive = item === 'Home'
                                 ? pathname === '/'
@@ -127,7 +127,7 @@ export default function Header() {
 
                     {/* Mobile menu button */}
                     <button
-                        className="md:hidden p-2 transition-all duration-300 text-black hover:bg-black/5 rounded-lg"
+                        className="lg:hidden p-2 transition-all duration-300 text-black hover:bg-black/5 rounded-lg"
                         onClick={toggleMenu}
                         aria-label="Toggle menu"
                     >
@@ -166,7 +166,7 @@ export default function Header() {
                 }`}
             >
                 {/* Menu content */}
-                <div className={`bg-white/90 backdrop-blur-sm pt-24 pb-6 px-6 ${menuOpen ? 'shadow-lg' : ''}`}>
+                <div className={`bg-white/90 backdrop-blur-sm pt-36 pb-6 px-6 ${menuOpen ? 'shadow-lg' : ''}`}>
                     <nav className="flex flex-col space-y-1">
                         {navItems.map((item, index) => {
                             const isActive = item === 'Home'

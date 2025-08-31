@@ -65,11 +65,11 @@ export default function HomePage() {
                 {/* Content */}
                 <div style={{ willChange: 'transform' }}>
                     <div className="relative z-10 lg:min-h-dvh flex items-center">
-                        <div className="max-w-7xl mx-auto px-6 py-12 w-full">
-                            <div className="grid grid-cols-1 lg:grid-cols-[3fr_5fr] lg:gap-12 lg:px-0 items-center">
+                        <div className="max-w-7xl mx-auto px-6 lg:py-12 p-30 w-full">
+                            <div className="grid grid-cols-1 lg:grid-cols-[3fr_5fr] lg:gap-12 gap-20 lg:px-0 items-center">
                                 {/* Left: Collage Image */}
                                 <div className="flex justify-center">
-                                    <div className="relative w-full max-w-md h-[50dvh]">
+                                    <div className="relative w-full max-w-md lg:h-[50dvh] h-[30dvh]">
                                         <Image
                                             src="/images/collage.png"
                                             alt="Research and project collage"
