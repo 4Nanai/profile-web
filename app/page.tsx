@@ -2,8 +2,6 @@
 
 import Image from 'next/image';
 import {useEffect, useState} from 'react';
-import InstagramIcon from "@/public/icons/Instagram";
-import Link from "next/link";
 
 export default function HomePage() {
     const [scrollY, setScrollY] = useState(0);
@@ -49,7 +47,7 @@ export default function HomePage() {
                             </div>
 
                             {/* Right: Introduction Text */}
-                            <div>
+                            <div className="mx-6 lg:mx-0">
                                 <div className="font-source-serif">
                                     <h1 className="text-6xl pl-2 font-extrabold text-blue-600">Hello,</h1>
                                     <h2 className="text-3xl pl-2 lg:pr-30 text-black leading-11 max-w-fit mb-[11px] font-semibold">
@@ -138,24 +136,6 @@ export default function HomePage() {
                         </div>
                     </section>
                 </main>
-
-                {/* Footer */}
-                <footer className="bg-black text-white text-center py-8">
-                    <div className="space-y-2">
-                        <div className="flex items-center justify-center">
-                            <span className="font-istok font-medium text-xl">
-                                JIAYI TANG
-                            </span>
-                            <Link href="/" className="ml-2">
-                                <InstagramIcon size={20} className="text-white"/>
-                            </Link>
-                        </div>
-                        <p className="text-gray-300">xxxxxxxxxx@gmail.com</p>
-                    </div>
-                </footer>
-
-
-
             </div>
         </div>
     );
