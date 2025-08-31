@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import Link from "next/link";
 import InstagramIcon from "@/public/icons/Instagram";
 
@@ -90,7 +90,7 @@ export default function HomePage() {
                                             intelligence, and public policy.
                                         </h2>
                                     </div>
-                                    <p className="border-y-[1px] py-[18px] pl-2 font-istok font-normal border-black text-[18px] text-gray-700 leading-tight lg:max-w-[calc(100%-50px)]">
+                                    <p className="border-y-[1px] py-[18px] pl-2 font-istok font-normal border-black text-[18px] text-gray-700 leading-tight lg:max-w-[80%]">
                                         dedicated to combating misinformation, advancing healthcare equity, and
                                         transforming
                                         inquiry into real-world impact.
