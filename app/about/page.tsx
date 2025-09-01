@@ -119,21 +119,21 @@ export default function AboutPage() {
                             referrerPolicy="strict-origin-when-cross-origin"
                             allowFullScreen></iframe>
                 </div>
-                <div className="absolute left-[2%] bottom-[3.6%] md:bottom-[2.8%] lg:bottom-[1.8%] w-[30.8%] md:w-[30.7%] h-[19.4%]">
+                <div className="absolute left-[2%] bottom-[3.6%] md:bottom-[2.8%] lg:bottom-[1.8%] xl:bottom-[1.6%] w-[30.8%] md:w-[30.7%] h-[19.4%] xl:h-[19.6%]">
                     <iframe className="w-full h-full" src="https://www.youtube.com/embed/8_MUORIpdc4"
                             title="YouTube video player" frameBorder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             referrerPolicy="strict-origin-when-cross-origin"
                             allowFullScreen></iframe>
                 </div>
-                <div className="absolute left-[34.55%] bottom-[3.6%] md:bottom-[2.8%] lg:bottom-[1.8%] w-[30.8%] md:w-[30.7%] h-[19.4%]">
+                <div className="absolute left-[34.55%] bottom-[3.6%] md:bottom-[2.8%] lg:bottom-[1.8%] xl:bottom-[1.6%] w-[30.8%] md:w-[30.7%] h-[19.4%] xl:h-[19.6%]">
                     <iframe className="w-full h-full" src="https://www.youtube.com/embed/eEQmA7ImkWY"
                             title="YouTube video player" frameBorder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             referrerPolicy="strict-origin-when-cross-origin"
                             allowFullScreen></iframe>
                 </div>
-                <div className="absolute right-[2.1%] bottom-[3.6%] md:bottom-[2.8%] lg:bottom-[1.8%] w-[30.8%] md:w-[30.7%] h-[19.4%]">
+                <div className="absolute right-[2.1%] bottom-[3.6%] md:bottom-[2.8%] lg:bottom-[1.8%] xl:bottom-[1.6%] w-[30.8%] md:w-[30.7%] h-[19.4%] xl:h-[19.6%]">
                     <iframe className="w-full h-full" src="https://www.youtube.com/embed/8_MUORIpdc4"
                             title="YouTube video player" frameBorder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
