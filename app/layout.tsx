@@ -5,7 +5,7 @@ import localFont from "next/font/local";
 import Footer from "@/app/components/Footer";
 
 export const metadata: Metadata = {
-    title: 'Jiayi Tang - Student Researcher',
+    title: 'Ellen Web - Researcher in Mathematics, AI, and Public Policy',
     description: 'A student researcher at the intersection of mathematics, artificial intelligence, and public policy.',
     keywords: ['mathematics', 'artificial intelligence', 'public policy', 'research'],
 };
