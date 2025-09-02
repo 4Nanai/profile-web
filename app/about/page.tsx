@@ -85,7 +85,7 @@ export default function AboutPage() {
                 {/* Header */}
                 <div className="relative py-3 md:py-4 lg:py-[23px] max-w-full flex justify-between items-center">
                     <div className="text-xl md:text-2xl lg:text-3xl pl-4 md:pl-8 font-istok font-bold text-black">
-                        JIAYI TANG&apos;s Channel
+                        JIAYI TANG&rsquo;s Channel
                     </div>
                     <div className="w-50 md:w-60 lg:w-80 pr-4 md:pr-8">
                         <Image

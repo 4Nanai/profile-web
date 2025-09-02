@@ -81,10 +81,12 @@ export default function HomePage() {
                             {/* Right: Introduction Text */}
                             <div className="mx-5 lg:mx-0">
                                 <div className="font-source-serif">
-                                    <h1 className="text-6xl pl-2 font-extrabold text-blue-600">Hello,</h1>
+                                    <h1 className="text-6xl pl-2 font-extrabold text-blue-600">Hello, I&rsquo;m
+                                        Ellen</h1>
                                     <h2 className="text-3xl pl-2 text-black leading-11 max-w-fit mb-[11px] font-semibold">
-                                        A student researcher at the intersection of mathematics, artificial
-                                        intelligence, and public policy.
+                                        A student researcher at the intersection
+                                        of mathematics, artificial intelligence,
+                                        and public policy.
                                     </h2>
                                 </div>
                                 <p className="border-y-[1px] py-[18px] pl-2 font-istok font-normal border-black text-[18px] text-gray-700 leading-tight">
@@ -95,20 +97,73 @@ export default function HomePage() {
                             </div>
                         </div>
                     </div>
+                    <div className="absolute bottom-6 inset-x-0 mx-auto w-fit">
+                        <p className="font-bold font-source-serif text-[18px]">
+                            I&rsquo;m proud to be the founder of BreathWell.
+                        </p>
+                    </div>
                 </div>
 
                 {/* White Background Sections */}
                 <div className="relative z-20 bg-white">
-                    <main className="max-w-7xl mx-auto px-6 py-12">
+                    <main className="relative mx-auto px-6 py-12">
+                        <div className=" lg:hidden absolute right-10 top-5 w-25">
+                            <img src="/images/homepage_breathwell_logo.png" alt="breathwell_logo"/>
+                        </div>
+                        {/* BreathWell Section */}
+                        <section className="max-w-fit lg:mx-0 lg:px-50 space-y-6 py-12 mx-6">
+                            <h3 className="text-blue-600 font-source-serif font-semibold text-3xl leading-relaxed">
+                                BreathWell:<br/>
+                                Youth for Occupational Lung Health
+                            </h3>
+                            <div className="space-y-4 text-gray-700 font-istok font-normal leading-relaxed">
+
+                                <div className="relative">
+                                    <div className="hidden lg:block absolute left-0 top-0 -translate-x-[224px]">
+                                        <img src="/images/homepage_breathwell.png" alt="breathwell" width="35%"/>
+                                    </div>
+                                    <p>
+                                        BreathWell is a youth-led nonprofit organization dedicated to improving
+                                        occupational
+                                        lung health in China. Founded during my high school years, the initiative began
+                                        with
+                                        small patient visits in Nanjing and has since grown into a network of more than
+                                        200
+                                        volunteers spanning students, doctors, community advocates, and media partners.
+                                        Our
+                                        mission is simple yet urgent: to turn public attention into sustainable
+                                        safeguards for
+                                        workers suffering from pneumoconiosis and other dust-related diseases.
+                                    </p>
+                                </div>
+
+                                <p>
+                                    Over the past three years, we have organized dozens of home visits, coordinated
+                                    medical
+                                    equipment donations, and supported families with legal and financial guidance.
+                                    We raised
+                                    over ¥10,000 through community fundraisers and mobilized hundreds of people
+                                    through a
+                                    600km relay run for World Lung Health Day. Beyond direct aid, we have produced
+                                    three
+                                    short documentaries to amplify workers&apos; voices, bringing their struggles
+                                    into
+                                    public conversation. BreathWell exists to ensure that awareness does not vanish
+                                    with a
+                                    fading headline but is translated into resources, standards, and policy. For us,
+                                    volunteers are the oxygen that keeps the movement alive.
+                                </p>
+                            </div>
+                        </section>
                         {/* Personal Section */}
                         <section
                             className="grid grid-cols-1 lg:grid-cols-[2fr_5fr] gap-12 items-start mb-2 py-12 lg:px-0 px-6">
                             {/* Left: Portrait */}
                             <div className="flex justify-center">
                                 <div className="relative w-70 h-86 border-blue-600"
-                                     style={{boxShadow: '16px 16px 0px 0px #2563eb'}}>
+                                     style={{boxShadow: '16px 16px 0px 0px #4E72EC'}}>
                                     <Image
-                                        src="/images/profile.png"
+                                        src="/images/homepage_profile.png"
                                         alt="Jiayi Tang portrait"
                                         fill
                                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -139,47 +194,6 @@ export default function HomePage() {
                                     world to
                                     hold both a serene stillness and a vibrant intensity. &rdquo;
                                 </blockquote>
-                            </div>
-                        </section>
-
-                        {/* BreathWell Section */}
-                        <section className="max-w-fit lg:mx-30 space-y-6 py-12 mx-6">
-                            <h3 className="text-blue-600 font-source-serif font-semibold text-3xl leading-relaxed">
-                                BreathWell:<br/>
-                                Youth for Occupational Lung Health
-                            </h3>
-
-                            <div className="space-y-4 text-gray-700 font-istok font-normal leading-relaxed">
-                                <p>
-                                    BreathWell is a youth-led nonprofit organization dedicated to improving
-                                    occupational
-                                    lung health in China. Founded during my high school years, the initiative began
-                                    with
-                                    small patient visits in Nanjing and has since grown into a network of more than
-                                    200
-                                    volunteers spanning students, doctors, community advocates, and media partners.
-                                    Our
-                                    mission is simple yet urgent: to turn public attention into sustainable
-                                    safeguards for
-                                    workers suffering from pneumoconiosis and other dust-related diseases.
-                                </p>
-
-                                <p>
-                                    Over the past three years, we have organized dozens of home visits, coordinated
-                                    medical
-                                    equipment donations, and supported families with legal and financial guidance.
-                                    We raised
-                                    over ¥10,000 through community fundraisers and mobilized hundreds of people
-                                    through a
-                                    600km relay run for World Lung Health Day. Beyond direct aid, we have produced
-                                    three
-                                    short documentaries to amplify workers&apos; voices, bringing their struggles
-                                    into
-                                    public conversation. BreathWell exists to ensure that awareness does not vanish
-                                    with a
-                                    fading headline but is translated into resources, standards, and policy. For us,
-                                    volunteers are the oxygen that keeps the movement alive.
-                                </p>
                             </div>
                         </section>
                     </main>
