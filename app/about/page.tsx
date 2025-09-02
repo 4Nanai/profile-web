@@ -84,10 +84,13 @@ export default function AboutPage() {
             <div className="relative w-full overflow-hidden bg-white">
                 {/* Header */}
                 <div className="relative py-3 md:py-4 lg:py-[23px] max-w-full flex justify-between items-center">
-                    <div className="text-xl md:text-2xl lg:text-3xl pl-4 md:pl-8 font-istok font-bold text-black">
+                    <div className="hidden sm:block sm:text-xl md:text-2xl lg:text-3xl pl-4 md:pl-8 font-istok font-bold text-black">
                         JIAYI TANG&rsquo;s Channel
                     </div>
-                    <div className="w-50 md:w-60 lg:w-80 pr-4 md:pr-8">
+                    <div className="block text-sm sm:hidden pl-4 font-istok font-bold text-black">
+                        JIAYI&rsquo;s Channel
+                    </div>
+                    <div className="w-45 sm:w-50 md:w-60 lg:w-80 pr-4 md:pr-8">
                         <Image
                             src="/images/about_page_search.png"
                             alt="search_block"
@@ -97,7 +100,7 @@ export default function AboutPage() {
                     </div>
                     <div className="absolute inset-0 flex items-center justify-end mt-[2px]">
                         <span
-                            className="text-black text-[10px] md:text-[13px] lg:text-base font-istok font-medium px-2 py-1 bg-transparent mr-12 md:mr-16 lg:mr-24">
+                            className="text-black text-[10px] md:text-[13px] lg:text-base font-istok font-medium px-2 py-1 bg-transparent mr-10 sm:mr-12 md:mr-16 lg:mr-24">
                             Black Pink - Kill This Love
                         </span>
                     </div>
@@ -112,7 +115,7 @@ export default function AboutPage() {
                         backgroundRepeat: 'no-repeat',
                     }}
                 />
-                <div className="absolute left-[22%] bottom-[50%] md:bottom-[51%] lg:bottom-[51%] xl:bottom-[52%] 2xl:bottom-[52.8%] w-[56%] h-[34.8%] sm:h-[36.3%] md:h-[36.3%] lg:h-[36.3%] xl:h-[36.6%] 2xl:h-[37.2%]">
+                <div className="absolute left-[22%] bottom-[50%] md:bottom-[51%] lg:bottom-[51%] xl:bottom-[52%] 2xl:bottom-[52.8%] w-[56%] h-[36.8%] sm:h-[36.3%] md:h-[36.3%] lg:h-[36.3%] xl:h-[36.6%] 2xl:h-[37.2%]">
                     <iframe className="w-full h-full" src="https://www.youtube.com/embed/8_MUORIpdc4"
                             title="YouTube video player" frameBorder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
