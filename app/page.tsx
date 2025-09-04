@@ -108,7 +108,7 @@ export default function HomePage() {
                 <div className="relative z-20 bg-white">
                     <main className="relative mx-auto px-6 py-12">
                         <div className=" lg:hidden absolute right-10 top-5 w-25">
-                            <img src="/images/homepage_breathwell_logo.png" alt="breathwell_logo"/>
+                            <Image src="/images/homepage_breathwell_logo.png" alt="breathwell_logo" width={100} height={100}/>
                         </div>
                         {/* BreathWell Section */}
                         <section className="max-w-fit lg:mx-0 lg:px-50 space-y-6 py-12 mx-6">
@@ -120,7 +120,7 @@ export default function HomePage() {
 
                                 <div className="relative">
                                     <div className="hidden lg:block absolute left-0 top-0 -translate-x-[224px]">
-                                        <img src="/images/homepage_breathwell.png" alt="breathwell" width="35%"/>
+                                        <Image src="/images/homepage_breathwell.png" alt="breathwell" width={180} height={180}/>
                                     </div>
                                     <p>
                                         BreathWell is a youth-led nonprofit organization dedicated to improving
