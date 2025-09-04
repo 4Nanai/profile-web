@@ -178,7 +178,7 @@ export default function Header() {
             `}</style>
 
             <header
-                className={`fixed top-0 left-0 right-0 z-50 px-6 lg:py-4 py-10 transition-all duration-300 ${
+                className={`fixed top-0 left-0 right-0 z-50 px-6 md:py-4 py-10 transition-all duration-300 ${
                     scrollY > 50 || menuOpen ? `${currentColor.navbarBg} backdrop-blur-sm` : 'bg-transparent'
                 }`}
             >
@@ -192,7 +192,7 @@ export default function Header() {
                     </Link>
 
                     {/* Desktop Navigation */}
-                    <nav ref={navRef} className="hidden lg:flex gap-8 relative">
+                    <nav ref={navRef} className="hidden md:flex gap-8 relative">
                         {navItems.map((item) => {
                             const isActive = item === 'Home'
                                 ? pathname === '/'
@@ -230,7 +230,7 @@ export default function Header() {
 
                     {/* Mobile menu button */}
                     <button
-                        className={`lg:hidden p-2 transition-all duration-300 ${currentColor.mobileButton} rounded-lg`}
+                        className={`md:hidden p-2 transition-all duration-300 ${currentColor.mobileButton} rounded-lg`}
                         onClick={toggleMenu}
                         aria-label="Toggle menu"
                     >
