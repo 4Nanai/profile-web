@@ -28,7 +28,6 @@ export default function Header() {
             text: 'text-blue-600',
             bg: 'bg-blue-50',
             hoverBg: 'hover:bg-blue-500/25',
-            // Navbar text colors
             navbarText: 'text-black', // navbar text color
             navbarTextInactive: 'text-gray-600/75',
             navbarTextHover: 'hover:text-gray-800',
@@ -36,33 +35,31 @@ export default function Header() {
             navbarBg: 'bg-white'
         },
         'Research': {
-            primary: 'rgb(34, 197, 94)', // green-500
-            primaryHex: '#22c55e',
-            light: 'rgb(220, 252, 231)', // green-100
-            hover: 'rgb(34, 197, 94)', // green-500
-            text: 'text-green-500',
-            bg: 'bg-green-50',
-            hoverBg: 'hover:bg-green-500/25',
-            // Navbar text colors
-            navbarText: 'text-gray-800',
-            navbarTextInactive: 'text-gray-500',
-            navbarTextHover: 'hover:text-gray-900',
-            mobileButton: 'text-gray-800 hover:bg-gray-800/5',
+            primary: 'rgb(37, 99, 235)', // blue-600
+            primaryHex: '#2563eb',
+            light: 'rgb(219, 234, 254)', // blue-100
+            hover: 'rgb(59, 130, 246)', // blue-500
+            text: 'text-blue-600',
+            bg: 'bg-blue-50',
+            hoverBg: 'hover:bg-blue-500/25',
+            navbarText: 'text-black', // navbar text color
+            navbarTextInactive: 'text-gray-600/75',
+            navbarTextHover: 'hover:text-gray-800',
+            mobileButton: 'text-black hover:bg-black/5',
             navbarBg: 'bg-white'
         },
         'Media': {
-            primary: 'rgb(168, 85, 247)', // purple-500
-            primaryHex: '#a855f7',
-            light: 'rgb(243, 232, 255)', // purple-100
-            hover: 'rgb(147, 51, 234)', // purple-600
-            text: 'text-purple-500',
-            bg: 'bg-purple-50',
-            hoverBg: 'hover:bg-purple-500/25',
-            // Navbar text colors
-            navbarText: 'text-gray-900',
-            navbarTextInactive: 'text-gray-400',
-            navbarTextHover: 'hover:text-gray-700',
-            mobileButton: 'text-gray-900 hover:bg-gray-900/5',
+            primary: 'rgb(37, 99, 235)', // blue-600
+            primaryHex: '#2563eb',
+            light: 'rgb(219, 234, 254)', // blue-100
+            hover: 'rgb(59, 130, 246)', // blue-500
+            text: 'text-blue-600',
+            bg: 'bg-blue-50',
+            hoverBg: 'hover:bg-blue-500/25',
+            navbarText: 'text-black', // navbar text color
+            navbarTextInactive: 'text-gray-600/75',
+            navbarTextHover: 'hover:text-gray-800',
+            mobileButton: 'text-black hover:bg-black/5',
             navbarBg: 'bg-white'
         },
         'About': {
