@@ -32,7 +32,7 @@ export default function AboutPage() {
                         <div
                             className="lg:pl-10 lg:pr-6 lg:bg-transparent mx-10 rounded-2xl bg-black/20 backdrop-blur-xs">
                             <p className="text-xl lg:text-2xl leading-9 font-source-serif">
-                                I was born in 2008 and am currently studying in the Fine Arts classat jinling High
+                                I was born in 2008 and am currently studying in the Fine Arts class at Jinling High
                                 School in
                                 Nanjing.
                             </p>

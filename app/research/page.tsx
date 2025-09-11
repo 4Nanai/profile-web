@@ -62,7 +62,7 @@ export default function Research() {
                         <div className="w-60 md:hidden">
                             <Image src="/images/research_page_hero.png" alt="research_page_hero" width="900" height="800" />
                         </div>
-                        <p className="font-source-serif font-bold text-2xl text-[#676767]">
+                        <p className="font-source-serif font-semibold text-2xl text-[#676767]">
                             Israel - 2019
                         </p>
                         <div className="hidden md:block w-60 absolute top-1/2 -translate-y-1/2 -translate-x-75">
