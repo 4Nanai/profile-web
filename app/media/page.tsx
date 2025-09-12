@@ -106,9 +106,9 @@ export default function Media() {
                                     her
                                     speech,I presented my own solution for this issue. We now turn to another
                                     challenge
-                                    that shapes our experiences: math anxiety. In Jiayi Tang’s speech, we’ll explore
+                                    that shapes our experiences: math anxiety. In Jiayi Tang&rsquo;s speech, we&rsquo;ll explore
                                     the
-                                    complexities of mathematical apprehension, we'll uncover how fear and
+                                    complexities of mathematical apprehension, we&rsquo;ll uncover how fear and
                                     misunderstanding in different domains impact our ability to embrace and utilize
                                     crucial knowledge. Stay tuned as we decode the causes and solutions for math
                                     anxiety
@@ -143,8 +143,8 @@ export default function Media() {
                                 <p className="text-[18px]">
                                     For a long time, Math Anxiety has been a major issue for students worldwide. In her
                                     speech,I presented my own solution for this issue. We now turn to another challenge
-                                    that shapes our experiences: math anxiety. In Jiayi Tang’s speech, we’ll explore the
-                                    complexities of mathematical apprehension, we'll uncover how fear and
+                                    that shapes our experiences: math anxiety. In Jiayi Tang&rsquo;s speech, we&rsquo;ll explore the
+                                    complexities of mathematical apprehension, we&rsquo;ll uncover how fear and
                                     misunderstanding in different domains impact our ability to embrace and utilize
                                     crucial knowledge. Stay tuned as we decode the causes and solutions for math anxiety
                                     next. This talk was given at a TEDx event using the TED conference format but

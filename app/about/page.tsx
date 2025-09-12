@@ -4,20 +4,28 @@ import Link from "next/link";
 export default function AboutPage() {
     return (
         <div className="min-h-screen bg-[#141414]">
-            <div className="relative lg:h-full overflow-hidden">
+            <div className="relative min-h-fit pb-[100px] overflow-hidden">
                 {/* Background */}
                 <div
-                    className="inset-0 w-full h-[calc(60dvh+10dvw)] lg:h-[calc(100dvh-63px)] lg:mt-16 mt-30 overflow-x-hidden"
+                    className="inset-0 md:w-[69%] w-[85%] aspect-[2128/1358] md:mt-16 mt-30 overflow-x-hidden"
                     style={{
-                        backgroundImage: 'url(/images/about_page_hero_bg.png)',
+                        backgroundImage: 'url(/images/about_page_hero_scene.png)',
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'top left',
+                        backgroundRepeat: 'no-repeat',
+                    }}
+                />
+                <div
+                    className="absolute md:top-0 top-1/20 right-0 md:w-[69%] w-[85%] aspect-[1794/1279] md:mt-16 mt-30 overflow-x-hidden"
+                    style={{
+                        backgroundImage: 'url(/images/about_page_hero_vector.png)',
                         backgroundSize: 'cover',
                         backgroundPosition: 'top left',
                         backgroundRepeat: 'no-repeat',
                     }}
                 />
                 {/* Foreground Content */}
-                <div
-                    className="absolute top-0 left-0 w-full h-dvh flex flex-col justify-center items-center text-white px-4 lg:px-20 mt-20">
+                <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center text-white px-4 lg:px-20 mt-20">
                     <div className="text-left space-y-4 max-w-4xl lg:ml-[50%]">
                         <div className="mb-4">
                             <Image
@@ -28,9 +36,7 @@ export default function AboutPage() {
                                 className="rounded-lg"
                             />
                         </div>
-
-                        <div
-                            className="lg:pl-10 lg:pr-6 lg:bg-transparent mx-10 rounded-2xl bg-black/20 backdrop-blur-xs">
+                        <div className="md:ml-16 md:mr-60 lg:ml-10 lg:mr-6 lg:bg-transparent mx-10 rounded-2xl bg-black/20 backdrop-blur-xs">
                             <p className="text-xl lg:text-2xl leading-9 font-source-serif">
                                 I was born in 2008 and am currently studying in the Fine Arts class at Jinling High
                                 School in
@@ -41,7 +47,7 @@ export default function AboutPage() {
                 </div>
             </div>
 
-            <div className="relative w-full overflow-hidden lg:-translate-y-15 -translate-y-10">
+            <section className="relative w-full -translate-y-[100px]">
                 {/* Background */}
                 <div
                     className="w-full aspect-[25/27]"
@@ -54,10 +60,10 @@ export default function AboutPage() {
                 />
 
                 {/* Foreground Content */}
-                <div className="hidden lg:block absolute right-4 bottom-24 w-full h-full">
-                    <div className="flex flex-col justify-end items-center text-white h-full">
+                <div className="hidden lg:block absolute right-4 bottom-24 ">
+                    <div className="flex flex-col justify-end items-center text-white">
                         <div className="text-left space-y-4 max-w-4xl ml-[10%]">
-                            <div className="ml-[40%] mr-6 p-4 rounded-2xl bg-black/20 backdrop-blur-[2px]">
+                            <div className="ml-[30%] mr-[10%] p-4 rounded-2xl bg-black/20 backdrop-blur-[2px]">
                                 <p className="text-2xl leading-9 font-source-serif">
                                     I love to read and have a collection of over 300 books, including novels, art books,
                                     and magazines. I also enjoy watching movies and TV shows, especially those that are
@@ -67,10 +73,10 @@ export default function AboutPage() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
 
             {/* Small Screen */}
-            <div className="lg:hidden w-full px-4 py-6 text-white">
+            <div className="lg:hidden w-full px-4 py-6 text-white -translate-y-[100px]">
                 <div className="p-4 rounded-2xl">
                     <p className="text-xl leading-9 font-source-serif">
                         I love to read and have a collection of over 300 books, including novels, art books,
@@ -81,7 +87,7 @@ export default function AboutPage() {
             </div>
 
             {/* Dance video */}
-            <div className="relative w-full overflow-hidden bg-white">
+            <section className="relative w-full overflow-hidden bg-white">
                 {/* Header */}
                 <div className="relative py-3 md:py-4 lg:py-[23px] max-w-full flex justify-between items-center">
                     <div className="hidden sm:block sm:text-xl md:text-2xl lg:text-3xl pl-4 md:pl-8 font-istok font-bold text-black">
@@ -143,7 +149,7 @@ export default function AboutPage() {
                             referrerPolicy="strict-origin-when-cross-origin"
                             allowFullScreen></iframe>
                 </div>
-            </div>
+            </section>
         </div>
     );
 }
