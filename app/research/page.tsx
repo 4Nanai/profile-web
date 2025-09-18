@@ -99,7 +99,8 @@ export default function Research() {
                                 </p>
                             </div>
                             <div className="flex justify-end items-center mt-8">
-                                <a href="https://google.com"
+                                <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5469768"
+                                   target="_blank" rel="noopener noreferrer"
                                    className="py-2 px-4 bg-[#1557A2] text-white font-istok transition-colors duration-300 hover:bg-[#0d3e6a]">
                                     Read More
                                 </a>
@@ -148,7 +149,8 @@ export default function Research() {
                                 </p>
                             </div>
                             <div className="flex justify-end items-center mt-8">
-                                <a href="https://google.com"
+                                <a href="https://www.scirp.org/journal/paperinformation?paperid=143185"
+                                   target="_blank" rel="noopener noreferrer"
                                    className="py-2 px-4 bg-[#1557A2] text-white font-istok transition-colors duration-300 hover:bg-[#0d3e6a]">
                                     Read More
                                 </a>
@@ -196,7 +198,8 @@ export default function Research() {
                                 </p>
                             </div>
                             <div className="flex justify-end items-center mt-8">
-                                <a href="https://google.com"
+                                <a href="https://www.questjournals.org/jses/papers/Vol11-issue-8/11082842.pdf"
+                                   target="_blank" rel="noopener noreferrer"
                                    className="py-2 px-4 bg-[#1557A2] text-white font-istok transition-colors duration-300 hover:bg-[#0d3e6a]">
                                     Read More
                                 </a>
