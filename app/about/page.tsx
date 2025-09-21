@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import VideoPlayer from "@/app/components/VideoPlayer";
 
 export default function AboutPage() {
     return (
@@ -25,18 +26,19 @@ export default function AboutPage() {
                     }}
                 />
                 {/* Foreground Content */}
-                <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center text-white px-4 lg:px-20 mt-20">
+                <div
+                    className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center text-white px-4 lg:px-20 mt-20">
                     <div className="text-left space-y-4 max-w-4xl lg:ml-[50%]">
-                        <div className="mb-4">
-                            <Image
-                                src="/images/about_page_im_ellen.png"
-                                alt="im_ellen"
-                                width={305}
-                                height={200}
-                                className="rounded-lg"
-                            />
-                        </div>
-                        <div className="md:ml-16 md:mr-60 lg:ml-10 lg:mr-6 lg:bg-transparent mx-10 rounded-2xl bg-black/20 backdrop-blur-xs">
+                        <Image
+                            src="/images/about_page_im_ellen.png"
+                            alt="im_ellen"
+                            width={305}
+                            height={200}
+                            className="rounded-lg"
+                            style={{ width: "auto", height: "auto" }}
+                        />
+                        <div
+                            className="md:ml-16 md:mr-60 lg:ml-10 lg:mr-6 lg:bg-transparent mx-10 rounded-2xl bg-black/20 backdrop-blur-xs">
                             <p className="text-xl lg:text-2xl leading-9 font-source-serif">
                                 I was born in 2008 and am currently studying in the Fine Arts class at Jinling High
                                 School in
@@ -90,7 +92,8 @@ export default function AboutPage() {
             <section className="relative w-full overflow-hidden bg-white">
                 {/* Header */}
                 <div className="relative py-3 md:py-4 lg:py-[23px] max-w-full flex justify-between items-center">
-                    <div className="hidden sm:block sm:text-xl md:text-2xl lg:text-3xl pl-4 md:pl-8 font-istok font-bold text-black">
+                    <div
+                        className="hidden sm:block sm:text-xl md:text-2xl lg:text-3xl pl-4 md:pl-8 font-istok font-bold text-black">
                         JIAYI TANG&rsquo;s Channel
                     </div>
                     <div className="block text-sm sm:hidden pl-4 font-istok font-bold text-black">
@@ -121,28 +124,28 @@ export default function AboutPage() {
                         backgroundRepeat: 'no-repeat',
                     }}
                 />
-                <div className="absolute left-[22%] bottom-[50%] md:bottom-[51%] lg:bottom-[51%] xl:bottom-[52%] 2xl:bottom-[52.8%] w-[56%] h-[36.8%] sm:h-[36.3%] md:h-[36.3%] lg:h-[36.3%] xl:h-[36.6%] 2xl:h-[37.2%]">
+                <div
+                    className="absolute left-[20%] bottom-[45.8%] sm:bottom-[50%] md:bottom-[51%] lg:bottom-[51%] xl:bottom-[52%] 2xl:bottom-[52.8%] w-[60%] h-[40%] sm:h-[36.3%] md:h-[36.3%] lg:h-[36.3%] xl:h-[36.6%] 2xl:h-[37.2%]">
+                    <VideoPlayer url="https://ch1tose-blog-1314393331.cos.ap-hongkong.myqcloud.com/EllenWeb/%E5%AD%97%E5%B9%95%E7%89%88.mp4"/>
+                </div>
+                <div
+                    className="absolute left-[2%] bottom-[3.6%] md:bottom-[2.8%] lg:bottom-[1.8%] xl:bottom-[1.6%] w-[30.8%] md:w-[30.7%] h-[19.4%] xl:h-[19.6%]">
                     <iframe className="w-full h-full" src="https://www.youtube.com/embed/8_MUORIpdc4"
                             title="YouTube video player" frameBorder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             referrerPolicy="strict-origin-when-cross-origin"
                             allowFullScreen></iframe>
                 </div>
-                <div className="absolute left-[2%] bottom-[3.6%] md:bottom-[2.8%] lg:bottom-[1.8%] xl:bottom-[1.6%] w-[30.8%] md:w-[30.7%] h-[19.4%] xl:h-[19.6%]">
-                    <iframe className="w-full h-full" src="https://www.youtube.com/embed/8_MUORIpdc4"
-                            title="YouTube video player" frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerPolicy="strict-origin-when-cross-origin"
-                            allowFullScreen></iframe>
-                </div>
-                <div className="absolute left-[34.55%] bottom-[3.6%] md:bottom-[2.8%] lg:bottom-[1.8%] xl:bottom-[1.6%] w-[30.8%] md:w-[30.7%] h-[19.4%] xl:h-[19.6%]">
+                <div
+                    className="absolute left-[34.55%] bottom-[3.6%] md:bottom-[2.8%] lg:bottom-[1.8%] xl:bottom-[1.6%] w-[30.8%] md:w-[30.7%] h-[19.4%] xl:h-[19.6%]">
                     <iframe className="w-full h-full" src="https://www.youtube.com/embed/eEQmA7ImkWY"
                             title="YouTube video player" frameBorder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             referrerPolicy="strict-origin-when-cross-origin"
                             allowFullScreen></iframe>
                 </div>
-                <div className="absolute right-[2.1%] bottom-[3.6%] md:bottom-[2.8%] lg:bottom-[1.8%] xl:bottom-[1.6%] w-[30.8%] md:w-[30.7%] h-[19.4%] xl:h-[19.6%]">
+                <div
+                    className="absolute right-[2.1%] bottom-[3.6%] md:bottom-[2.8%] lg:bottom-[1.8%] xl:bottom-[1.6%] w-[30.8%] md:w-[30.7%] h-[19.4%] xl:h-[19.6%]">
                     <iframe className="w-full h-full" src="https://www.youtube.com/embed/8_MUORIpdc4"
                             title="YouTube video player" frameBorder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

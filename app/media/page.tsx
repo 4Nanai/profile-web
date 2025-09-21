@@ -92,7 +92,7 @@ export default function Media() {
                             <div className="w-full h-fit flex justify-center mt-10">
                                 <div className="w-[825px] h-[464px]">
                                     <iframe className="w-full h-full"
-                                            src="https://www.youtube.com/embed/dcEdE4OpZJ4/watch?v"
+                                            src="https://www.youtube.com/embed/5crAwEZvjpc?si=xbQHjeg3_o1imjZs"
                                             title="YouTube video player" frameBorder="0"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                             referrerPolicy="strict-origin-when-cross-origin"
