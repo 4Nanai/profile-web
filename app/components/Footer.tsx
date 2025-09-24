@@ -13,7 +13,7 @@ export default function Footer() {
                         <InstagramIcon size={20} className="text-white"/>
                     </Link>
                 </div>
-                <p className="text-gray-300">xxxxxxxxxx@gmail.com</p>
+                <p className="text-gray-300">tangjiayi0531@126.com</p>
                 <div className="md:absolute md:bottom-4 md:left-4 md:mt-0 justify-center mt-6">
                     <p className="text-white/80 font-istok text-[15px]">&copy; 2025 Jiayi Tang | Ellen</p>
                 </div>
